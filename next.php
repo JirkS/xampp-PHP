@@ -17,13 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $jeTamEmail = TRUE;
             if($insecure_val['password'] == $password){
                 $successNext = FALSE;
-                echo 'prihlasen';
+                readfile("loggedindex.php");
                 break;
             }
         }
         
     }
-    if($jeTamEmail && $successNext == TRUE){
+    if($jeTamEmail && $successNext){
         echo "spatne heslo";
     }
     
